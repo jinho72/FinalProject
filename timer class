@@ -1,0 +1,33 @@
+class Timer {
+  float totalTime = 5;
+  String tt;
+  String first = "Time Remaining: ";
+  int s = second();
+ 
+Timer(float totalTime) {
+     this.totalTime = totalTime;
+   }
+   
+   
+ void levelUp() { //this method is used when game levels up
+   totalTime += 5;
+ } 
+  void tick() { //this method is used to countdown the timer
+    totalTime = totalTime - s; 
+     String tt  = str(totalTime);
+
+   PFont f = createFont("Arial",  10);
+    textFont(f);
+    textSize(20);
+    String full = first + tt;
+    text(full,10,30);
+  }
+
+ boolean timeOut(){ //this boolean method is notice if the time has run out
+   if(totalTime == 0) {
+     return true;
+  }else {
+    return false;
+ }
+ }
+}
