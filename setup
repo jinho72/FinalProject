@@ -1,0 +1,43 @@
+Timer timer;
+
+
+public void settings() {
+  size(600,500);   
+}
+
+void setup() {
+  timer = new Timer(5);
+  
+}
+
+void draw() {
+    timer.tick();
+
+  
+
+  line(0,50, 600,50); //constructing subway train
+  line(0,200, 600,200);
+  rectMode(CENTER);
+  rect(300,125,150,120,10); 
+  rect(110, 100, 180, 60, 20); //left window
+  rect(490, 100, 180,60, 20); //right window
+  
+}
+
+void startGame() {
+  textAlign(CENTER);
+  textSize(20);
+  fill(255,0,0);
+  text("Subway is here! Get people in!", width/2, height/2);  
+  
+  
+}
+
+
+void playGame() {
+  fill(0,0, 255);
+  
+  //if(timer.runOut() = true) {
+  //  endGame();
+ // }
+}  
